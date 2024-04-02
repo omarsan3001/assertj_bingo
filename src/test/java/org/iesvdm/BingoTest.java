@@ -31,7 +31,7 @@ public class BingoTest {
             for (int j = 0; j < carton[i].length; j++) {
                 if (carton[i][j] == -1) {
                     hayBlancos = true;
-                    break; // Exit inner loop once a blank is found
+                    break;
                 }
             }
         }
@@ -42,7 +42,7 @@ public class BingoTest {
     @Test
     public void testBuscarFila() {
         int[][] arrayBi = new int[3][3];
-        arrayBi[0][0] = -1; // Posición con espacio en blanco
+        arrayBi[0][0] = -1;
 
         boolean esta = buscarFila(arrayBi, 0, 0);
 
@@ -52,8 +52,8 @@ public class BingoTest {
     @Test
     public void testBuscarColumnas() {
         int[][] arrayBi = new int[3][3];
-        arrayBi[0][0] = -1; // Posición con espacio en blanco
-        arrayBi[1][0] = -1; // Segunda posición con espacio en blanco en la misma columna
+        arrayBi[0][0] = -1;
+        arrayBi[1][0] = -1;
 
         boolean esta2Veces = buscarColumna(arrayBi, 0);
 
@@ -67,7 +67,7 @@ public class BingoTest {
 
         boolean esta = buscarValorRepetido(array, elemento);
 
-        assertTrue(esta);  // No message for successful assertion
+        assertTrue(esta);
     }
 
     @Test
@@ -87,7 +87,7 @@ public class BingoTest {
 
         int[] nuevoArray = insertarAlFinal(array, elemento);
 
-        assertArrayEquals(new int[]{1, 2, 3, 4}, nuevoArray); // No message for successful assertion
+        assertArrayEquals(new int[]{1, 2, 3, 4}, nuevoArray);
     }
 
     @Test
